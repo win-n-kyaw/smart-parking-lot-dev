@@ -1,4 +1,2 @@
 [core]
-    remote = local-remote
-['remote "local-remote"']
-    url = ../local-remote
+    autostage = true
