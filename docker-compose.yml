@@ -1,0 +1,20 @@
+name: smart-parking-lot
+services:
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_USER: spl-db-admin
+      POSTGRES_PASSWORD: smart-parking-lot
+      POSTGRES_DB: spl-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U spl-db-admin -d spl-db"]
+      interval: 5s
+      timeout: 2s
+      retries: 20
+      
+volumes:
+  db-data:
