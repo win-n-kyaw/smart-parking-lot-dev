@@ -1,3 +1,6 @@
 [core]
     autostage = true
-
+['remote "gdrive-remote"']
+    url = gdrive://1ViKHRc5YmsUoodex_Q4XWeGFchw2Qzwb/init_data
+    gdrive_client_id = # ask developer 
+    gdrive_client_secret = # ask developer
