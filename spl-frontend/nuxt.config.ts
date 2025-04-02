@@ -17,9 +17,12 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-
+  fileStorage: {
+    mount: process.env.FILE_STORAGE_MOUNT || "./uploads",
+  },
   modules: [
     "@pinia/nuxt",
-    "@prisma/nuxt"
+    "@prisma/nuxt",
+    "nuxt-file-storage"
   ],
 })
